@@ -1,12 +1,188 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
+
   <body>
+    <header class="header">
+      <img class="header__logo" src="#" alt="Логотип Седоны">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a class="navigation__link" href="#">Главная</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">О седоне</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Гостиницы</a></li>
+        </ul>
+      </nav>
 
+      <div class="header__controls">
+        <button class="header__button header__button--search">
+          <img src="#" alt="">
+        </button>
+
+        <button class="header__button header__button--favorites">
+          <img src="#" alt="">
+        </button>
+
+        <button class="header__button header__button--main">Хочу сюда!</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img class="hero__background-image" src="#" alt="">
+      <img class="hero__title-image" src="#" alt="">
+    </section>
+
+    <section class="about">
+      <div class="about__info">
+        <h1 class="about__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p class="about__subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </div>
+
+      <div class="about__content">
+        <div class="about__card about__card--full">
+          <div class="about__card-info">
+            <h2 class="about__card-title">Настоящий городок</h2>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
+
+          <img class="about__card-image" src="#" alt="">
+        </div>
+
+        <div class="about__cards">
+          <article class="about__card">
+            <h3 class="about__card-title">Небольшая площадь</h3>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Все достопримечательности находятся очень близко</p>
+          </article>
+
+          <article class="about__card">
+            <h3 class="about__card-title">Красивая дорога</h3>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </article>
+
+          <article class="about__card">
+            <h3 class="about__card-title">Мало туристов</h3>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Большинство едет в Гранд Каньон и толпится там</p>
+          </article>
+        </div>
+
+        <div class="about__card about__card--full about__card--reverse">
+          <img class="about__card-image" src="#" alt="">
+
+          <div class="about__card-info">
+            <h2 class="about__card-title">Там есть мост дьявола</h2>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features__info">
+        <h2 class="features__title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <p class="features__subtitle">Опытный персонал и качественное обслуживание!</p>
+      </div>
+
+      <div class="features__content">
+        <article class="features__card">
+          <img class="features__card-icon" src="#" alt="">
+          <h3 class="features__card-title">Жильё</h3>
+          <p class="features__card-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        </article>
+
+        <article class="features__card">
+          <img class="features__card-icon" src="#" alt="">
+          <h3 class="features__card-title">Еда</h3>
+          <p class="features__card-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+        </article>
+
+        <article class="features__card">
+          <img class="features__card-icon" src="#" alt="">
+          <h3 class="features__card-title">Сувениры</h3>
+          <p class="features__card-description">Не только китайского, но и настоящего местного производства!</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="cta__title">Заинтересовались?</h2>
+      <p class="cta__subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+      </p>
+      <button class="cta__button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+    </section>
+
+    <dialog class="modal">
+      <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+      <button class="modal__close-button" type="button"><img src="#" alt=""></button>
+
+      <form class="modal__form">
+        <div class="modal__form-item">
+          <label class="modal__label" for="check-in-date">Дата заезда:</label>
+          <input class="modal__input" type="date" id="check-in-date">
+        </div>
+
+        <div class="modal__form-item">
+          <label class="modal__label" for="check-out-date">Дата выезда:</label>
+          <input class="modal__input" type="date" id="check-out-date">
+        </div>
+
+        <div class="modal__form-steppers">
+          <div class="modal__form-item">
+            <label class="modal__label" for="adults">Взрослые:</label>
+            <input class="modal__input" type="number" id="adults" min="0" value="2">
+          </div>
+          <div class="modal__form-item">
+            <label class="modal__label" for="children">Дети:</label>
+            <input class="modal__input" type="number" id="children" min="0" value="0">
+          </div>
+        </div>
+
+        <button class="modal__button" type="submit">Найти</button>
+      </form>
+    </dialog>
+
+    <section class="subscribe">
+      <img class="subscribe__background" src="#" alt="">
+      <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+      <p class="subscribe__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <form class="subscribe__form">
+        <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
+        <input class="subscribe__input" type="email" placeholder="Ваш e-mail">
+        <button class="subscribe__button" type="submit">Подписаться</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="#" alt="">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="#" alt="">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="#" alt="">
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__phone">+7 (812) 812-12-12</p>
+
+      <img class="footer__logo" src="#" alt="">
+    </footer>
   </body>
+
 </html>
