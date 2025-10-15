@@ -9,23 +9,25 @@
 
   <body>
     <header class="header">
-      <img class="header__logo" src="#" alt="">
+      <a class="header__logo-link" href="index.html">
+        <img class="header__logo" src="#" alt="Логотип Седоны">
+      </a>
 
       <nav class="header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a class="navigation__link" href="#">Главная</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#">О седоне</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="catalog.html">О седоне</a></li>
           <li class="navigation__item"><a class="navigation__link" href="#">Гостиницы</a></li>
         </ul>
       </nav>
 
       <div class="header__controls">
-        <button class="header__button header__button--search">
-          <img src="#" alt="">
+        <button class="header__button header__button--search" type="button">
+          <img src="#" alt="Поиск">
         </button>
 
-        <button class="header__button header__button--favorites">
-          <img src="#" alt="">
+        <button class="header__button header__button--favorites" type="button">
+          <img src="#" alt="Избранное">
         </button>
 
         <button class="header__button header__button--main">Хочу сюда!</button>
@@ -115,34 +117,37 @@
 
     <section class="cta">
       <h2 class="cta__title">Заинтересовались?</h2>
-      <p class="cta__subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+      <p class="cta__subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+        Седоне
       </p>
       <button class="cta__button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
     </section>
 
     <dialog class="modal">
       <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
-      <button class="modal__close-button" type="button"><img src="#" alt=""></button>
+      <button class="modal__close-button" type="button">
+        <img src="#" alt="Закрыть">
+      </button>
 
-      <form class="modal__form">
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
         <div class="modal__form-item">
           <label class="modal__label" for="check-in-date">Дата заезда:</label>
-          <input class="modal__input" type="date" id="check-in-date">
+          <input class="modal__input" type="date" id="check-in-date" name="check-in-date">
         </div>
 
         <div class="modal__form-item">
           <label class="modal__label" for="check-out-date">Дата выезда:</label>
-          <input class="modal__input" type="date" id="check-out-date">
+          <input class="modal__input" type="date" id="check-out-date" name="check-out-date">
         </div>
 
         <div class="modal__form-steppers">
           <div class="modal__form-item">
             <label class="modal__label" for="adults">Взрослые:</label>
-            <input class="modal__input" type="number" id="adults" min="0" value="2">
+            <input class="modal__input" type="number" id="adults" name="adults" min="0" value="2">
           </div>
           <div class="modal__form-item">
             <label class="modal__label" for="children">Дети:</label>
-            <input class="modal__input" type="number" id="children" min="0" value="0">
+            <input class="modal__input" type="number" id="children" name="children" min="0" value="0">
           </div>
         </div>
 
@@ -151,11 +156,10 @@
     </dialog>
 
     <section class="subscribe">
-      <img class="subscribe__background" src="#" alt="">
       <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
       <p class="subscribe__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
-      <form class="subscribe__form">
-        <input class="subscribe__input" type="email" placeholder="Ваш e-mail">
+      <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
+        <input class="subscribe__input" type="email" name="email" placeholder="Ваш e-mail" required>
         <button class="subscribe__button" type="submit">Подписаться</button>
       </form>
     </section>
@@ -164,24 +168,26 @@
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link" href="#">
-            <img src="#" alt="">
+            <img src="#" alt="ВКонтакте">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#">
-            <img src="#" alt="">
+            <img src="#" alt="Телеграм">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#">
-            <img src="#" alt="">
+            <img src="#" alt="YouTube">
           </a>
         </li>
       </ul>
 
-      <p class="footer__phone">+7 (812) 812-12-12</p>
+      <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
-      <img class="footer__logo" src="#" alt="">
+      <a class="footer__logo-link" href="#" target="_blank">
+        <img class="footer__logo" src="#" alt="Логотип HTML Academy">
+      </a>
     </footer>
   </body>
 
