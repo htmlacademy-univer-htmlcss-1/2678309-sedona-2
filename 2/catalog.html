@@ -17,7 +17,8 @@
                 <ul class="navigation__list">
                     <li class="navigation__item"><a class="navigation__link" href="#">Главная</a></li>
                     <li class="navigation__item"><a class="navigation__link" href="#">О седоне</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="catalog.html">Гостиницы</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--active"
+                            href="catalog.html">Гостиницы</a></li>
                 </ul>
             </nav>
 
@@ -53,13 +54,57 @@
 
             <div class="search__content">
                 <form class="search__content-form" action="https://echo.htmlacademy.ru/" method="get">
+                    <div class="search__content-item">
+                        <label class="search__content-label">Инфраструктура:</label>
+                        <ul class="search__content-list">
+                            <li class="search__content-item">
+                                <input class="search__content-input" type="checkbox" id="infrastructure-1"
+                                    name="infrastructure-1">
+                                <label class="search__content-label" for="infrastructure-1">Бассейн</label>
+                            </li>
+                            <li class="search__content-item">
+                                <input class="search__content-input" type="checkbox" id="infrastructure-2"
+                                    name="infrastructure-2">
+                                <label class="search__content-label" for="infrastructure-2">Парковка</label>
+                            </li>
+                            <li class="search__content-item">
+                                <input class="search__content-input" type="checkbox" id="infrastructure-3"
+                                    name="infrastructure-3">
+                                <label class="search__content-label" for="infrastructure-3">WiFi</label>
+                            </li>
+                        </ul>
+                    </div>
 
+                    <div class="search__content-item">
+                        <fieldset class="search__fieldset">
+                            <legend class="search__content-label">Тип жилья:</legend>
+                            <ul class="search__content-list">
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-1" name="housing"
+                                        value="hotel">
+                                    <label class="search__content-label" for="housing-1">Гостиница</label>
+                                </li>
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-2" name="housing"
+                                        value="motel">
+                                    <label class="search__content-label" for="housing-2">Мотель</label>
+                                </li>
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-3" name="housing"
+                                        value="apartments">
+                                    <label class="search__content-label" for="housing-3">Апартаменты</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+
+                    <!-- Фильтр цены -->
+
+                    <div class="search__buttons">
+                        <button class="search__button search__button--apply" type="submit">Применить</button>
+                        <button class="search__button search__button--reset" type="reset">Сбросить</button>
+                    </div>
                 </form>
-
-                <div class="search__buttons">
-                    <button class="search__button search__button--apply" type="submit">Применить</button>
-                    <button class="search__button search__button--reset" type="reset">Сбросить</button>
-                </div>
             </div>
         </section>
 
@@ -95,10 +140,8 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
-                                избранное</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
+                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
@@ -129,10 +172,8 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
-                                избранное</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
+                            <button class="catalog__card-button catalog__card-button--favorite catalog__card-button--favorite--active" type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
@@ -163,8 +204,7 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
                             <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
                         </div>
 
@@ -193,10 +233,8 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
-                                избранное</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
+                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
@@ -218,19 +256,19 @@
                 <nav class="catalog__pagination pagination">
                     <ul class="pagination__list">
                         <li class="pagination__item">
-                            1
+                            <a class="pagination__link pagination__link--active" href="#">1</a>
                         </li>
                         <li class="pagination__item">
-                            2
+                            <a class="pagination__link" href="#">2</a>
                         </li>
                         <li class="pagination__item">
-                            3
+                            <a class="pagination__link" href="#">3</a>
                         </li>
                         <li class="pagination__item pagination__item--dots">
-                            ...
+                            <a class="pagination__link" href="#">...</a>
                         </li>
                         <li class="pagination__item">
-                            10
+                            <a class="pagination__link" href="#">10</a>
                         </li>
                     </ul>
                 </nav>
