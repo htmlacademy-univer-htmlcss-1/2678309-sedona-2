@@ -9,24 +9,24 @@
     <body>
         <header class="header">
             <a class="header__logo-link" href="index.html">
-                <img class="header__logo" src="#" alt="Логотип Седоны">
+                <img class="header__logo" src="images/logo-sedona.svg" alt="Логотип Седоны">
             </a>
 
             <nav class="header__navigation navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a class="navigation__link" href="#">Главная</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="index.html">Главная</a></li>
                     <li class="navigation__item"><a class="navigation__link" href="#">О седоне</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="catalog.html">Гостиницы</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--active" href="catalog.html">Гостиницы</a></li>
                 </ul>
             </nav>
 
             <div class="header__controls">
                 <button class="header__button header__button--search" type="button">
-                    <img src="#" alt="Поиск">
+                    <img src="images/header-search.svg" alt="Поиск">
                 </button>
 
                 <button class="header__button header__button--favorites" type="button">
-                    <img src="#" alt="Избранное">
+                    <img src="images/header-favorites.svg" alt="Избранное">
                 </button>
 
                 <button class="header__button header__button--main">Хочу сюда!</button>
@@ -39,7 +39,7 @@
             <ul class="search__breadcrumbs breadcrumbs">
                 <li class="breadcrumbs__item">
                     <a class="breadcrumbs__link" href="index.html">
-                        <img class="breadcrumbs__icon" src="#" alt="Главная">
+                        <img class="breadcrumbs__icon" src="images/home.svg" alt="Главная">
                     </a>
                 </li>
                 <li class="breadcrumbs__item">
@@ -52,13 +52,51 @@
 
             <div class="search__content">
                 <form class="search__content-form" action="https://echo.htmlacademy.ru/" method="get">
+                    <div class="search__content-item">
+                        <label class="search__content-label">Инфраструктура:</label>
+                        <ul class="search__content-list">
+                            <li class="search__content-item">
+                                <input class="search__content-input" type="checkbox" id="infrastructure-1" name="infrastructure-1">
+                                <label class="search__content-label" for="infrastructure-1">Бассейн</label>
+                            </li>
+                            <li class="search__content-item">
+                                <input class="search__content-input" type="checkbox" id="infrastructure-2" name="infrastructure-2">
+                                <label class="search__content-label" for="infrastructure-2">Парковка</label>
+                            </li>
+                            <li class="search__content-item">
+                                <input class="search__content-input" type="checkbox" id="infrastructure-3" name="infrastructure-3">
+                                <label class="search__content-label" for="infrastructure-3">WiFi</label>
+                            </li>
+                        </ul>
+                    </div>
 
+                    <div class="search__content-item">
+                        <fieldset class="search__fieldset">
+                            <legend class="search__content-label">Тип жилья:</legend>
+                            <ul class="search__content-list">
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-1" name="housing" value="hotel">
+                                    <label class="search__content-label" for="housing-1">Гостиница</label>
+                                </li>
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-2" name="housing" value="motel">
+                                    <label class="search__content-label" for="housing-2">Мотель</label>
+                                </li>
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-3" name="housing" value="apartments">
+                                    <label class="search__content-label" for="housing-3">Апартаменты</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+
+                    <!-- Фильтр цены -->
+
+                    <div class="search__buttons">
+                        <button class="search__button search__button--apply" type="submit">Применить</button>
+                        <button class="search__button search__button--reset" type="reset">Сбросить</button>
+                    </div>
                 </form>
-
-                <div class="search__buttons">
-                    <button class="search__button search__button--apply" type="submit">Применить</button>
-                    <button class="search__button search__button--reset" type="reset">Сбросить</button>
-                </div>
             </div>
         </section>
 
@@ -86,7 +124,7 @@
             <div class="catalog__content">
                 <ul class="catalog__cards-list">
                     <li class="catalog__card">
-                        <img class="catalog__card-image" src="#" alt="Amara Resort & Spa">
+                        <img class="catalog__card-image" src="images/hotel-1.jpg" alt="Amara Resort & Spa">
                         <h3 class="catalog__card-title">Amara Resort & Spa</h3>
                         <div class="catalog__card-info">
                             <p class="catalog__card-type">Гостиница</p>
@@ -94,25 +132,23 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
-                                избранное</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
+                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
                             <ul class="catalog__card-rating">
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                             </ul>
                             <p class="catalog__card-review">Рейтинг: 8,5</p>
@@ -120,7 +156,7 @@
                     </li>
 
                     <li class="catalog__card">
-                        <img class="catalog__card-image" src="#" alt="Villas at Poco Diablo">
+                        <img class="catalog__card-image" src="images/hotel-2.jpg" alt="Villas at Poco Diablo">
                         <h3 class="catalog__card-title">Villas at Poco Diablo</h3>
                         <div class="catalog__card-info">
                             <p class="catalog__card-type">Гостиница</p>
@@ -128,25 +164,23 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
-                                избранное</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
+                            <button class="catalog__card-button catalog__card-button--favorite catalog__card-button--favorite--active" type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
                             <ul class="catalog__card-rating">
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                             </ul>
                             <p class="catalog__card-review">Рейтинг: 9,2</p>
@@ -154,7 +188,7 @@
                     </li>
 
                     <li class="catalog__card">
-                        <img class="catalog__card-image" src="#" alt="Desert Quail Inn">
+                        <img class="catalog__card-image" src="images/hotel-3.jpg" alt="Desert Quail Inn">
                         <h3 class="catalog__card-title">Desert Quail Inn</h3>
                         <div class="catalog__card-info">
                             <p class="catalog__card-type">Гостиница</p>
@@ -162,21 +196,20 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
                             <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
                             <ul class="catalog__card-rating">
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                             </ul>
                             <p class="catalog__card-review">Рейтинг: 6,9</p>
@@ -184,7 +217,7 @@
                     </li>
 
                     <li class="catalog__card">
-                        <img class="catalog__card-image" src="#" alt="GreenTree Inn">
+                        <img class="catalog__card-image" src="images/hotel-4.jpg" alt="GreenTree Inn">
                         <h3 class="catalog__card-title">GreenTree Inn</h3>
                         <div class="catalog__card-info">
                             <p class="catalog__card-type">Гостиница</p>
@@ -192,19 +225,17 @@
                         </div>
 
                         <div class="catalog__card-buttons">
-                            <button class="catalog__card-button catalog__card-button--details"
-                                type="button">подробнее</button>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
-                                избранное</button>
+                            <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
+                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
                             <ul class="catalog__card-rating">
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                                 <li class="catalog__card-star">
-                                    <img src="#" alt="Звезда">
+                                    <img src="images/rating-star.svg" alt="">
                                 </li>
                             </ul>
                             <p class="catalog__card-review">Рейтинг: 5,0</p>
@@ -217,19 +248,19 @@
                 <nav class="catalog__pagination pagination">
                     <ul class="pagination__list">
                         <li class="pagination__item">
-                            1
+                            <a class="pagination__link pagination__link--active" href="#">1</a>
                         </li>
                         <li class="pagination__item">
-                            2
+                            <a class="pagination__link" href="#">2</a>
                         </li>
                         <li class="pagination__item">
-                            3
+                            <a class="pagination__link" href="#">3</a>
                         </li>
                         <li class="pagination__item pagination__item--dots">
-                            ...
+                            <a class="pagination__link" href="#">...</a>
                         </li>
                         <li class="pagination__item">
-                            10
+                            <a class="pagination__link" href="#">10</a>
                         </li>
                     </ul>
                 </nav>
@@ -248,26 +279,26 @@
         <footer class="footer">
             <ul class="footer__social social">
                 <li class="social__item">
-                    <a class="social__link" href="#">
-                        <img src="#" alt="ВКонтакте">
+                    <a class="social__link" href="https://vk.com/htmlacademy">
+                        <img src="images/social-vk.svg" alt="ВКонтакте">
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#">
-                        <img src="#" alt="Телеграм">
+                    <a class="social__link" href="https://t.me/htmlacademy">
+                        <img src="images/social-telegram.svg" alt="Телеграм">
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#">
-                        <img src="#" alt="YouTube">
+                    <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+                        <img src="images/social-youtube.svg" alt="YouTube">
                     </a>
                 </li>
             </ul>
 
             <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
-            <a class="footer__logo-link" href="#" target="_blank">
-                <img class="footer__logo" src="#" alt="Логотип HTML Academy">
+            <a class="footer__logo-link" href="https://htmlacademy.ru/" target="_blank">
+                <img class="footer__logo" src="images/logo-htmlacademy.svg" alt="Логотип HTML Academy">
             </a>
         </footer>
     </body>
