@@ -97,7 +97,21 @@
                         </fieldset>
                     </div>
 
-                    <!-- Фильтр цены -->
+                    <div class="search__content-item">
+                        <label class="search__content-label">Стоимость, ₽:</label>
+                        <ul class="search__content-list">
+                            <li class="search__content-item">
+                                <label class="search__content-label" for="start-price">от</label>
+                                <input class="search__content-input price-input" type="text" id="start-price"
+                                    name="start-price" value="0">
+                            </li>
+                            <li class="search__content-item">
+                                <label class="search__content-label" for="end-price">до</label>
+                                <input class="search__content-input price-input" type="text" id="end-price"
+                                    name="end-price" value="9000">
+                            </li>
+                        </ul>
+                    </div>
 
                     <div class="search__buttons">
                         <button class="search__button search__button--apply" type="submit">Применить</button>
@@ -140,7 +154,8 @@
 
                         <div class="catalog__card-buttons">
                             <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
+                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
+                                избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
@@ -172,7 +187,9 @@
 
                         <div class="catalog__card-buttons">
                             <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
-                            <button class="catalog__card-button catalog__card-button--favorite catalog__card-button--favorite--active" type="button">в избранное</button>
+                            <button
+                                class="catalog__card-button catalog__card-button--favorite catalog__card-button--favorite--active"
+                                type="button">в избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
@@ -204,7 +221,8 @@
 
                         <div class="catalog__card-buttons">
                             <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
+                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
+                                избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
@@ -233,7 +251,8 @@
 
                         <div class="catalog__card-buttons">
                             <a class="catalog__card-link catalog__card-link--details" href="#">подробнее</a>
-                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в избранное</button>
+                            <button class="catalog__card-button catalog__card-button--favorite" type="button">в
+                                избранное</button>
                         </div>
 
                         <div class="catalog__card-footer">
@@ -286,25 +305,27 @@
         <footer class="footer">
             <ul class="footer__social social">
                 <li class="social__item">
-                    <a class="social__link" href="#">
+                    <a class="social__link" href="https://vk.com/htmlacademy">
                         <img src="#" alt="ВКонтакте">
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#">
+                    <a class="social__link" href="https://t.me/htmlacademy ">
                         <img src="#" alt="Телеграм">
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#">
+                    <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
                         <img src="#" alt="YouTube">
                     </a>
                 </li>
             </ul>
 
-            <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <address>
+                <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </address>
 
-            <a class="footer__logo-link" href="#" target="_blank">
+            <a class="footer__logo-link" href="https://htmlacademy.ru/" target="_blank">
                 <img class="footer__logo" src="#" alt="Логотип HTML Academy">
             </a>
         </footer>
