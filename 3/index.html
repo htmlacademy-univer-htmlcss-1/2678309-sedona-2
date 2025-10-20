@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <base href="https://htmlacademy-univer-htmlcss-1.github.io/2678309-sedona-2/3/">
+</head>
+
+  <body>
+    <header class="header">
+      <a class="header__logo-link" href="index.html">
+        <img class="header__logo" src="images/logo-sedona.svg" alt="Логотип Седоны">
+      </a>
+
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a class="navigation__link" href="index.html">Главная</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">О седоне</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="catalog.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button class="header__button header__button--search" type="button">
+          <img src="images/header-search.svg" alt="Поиск">
+        </button>
+
+        <button class="header__button header__button--favorites" type="button">
+          <img src="images/header-favorites.svg" alt="Избранное">
+          <span class="header__button-counter">12</span>
+        </button>
+
+        <button class="header__button header__button--main">Хочу сюда!</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img class="hero__title-image" src="images/welcome.svg" alt="Welcome to the gorgeous Sedona">
+    </section>
+
+    <section class="about">
+      <div class="about__info">
+        <h1 class="about__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p class="about__subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </div>
+
+      <div class="about__content">
+        <div class="about__card about__card--full">
+          <div class="about__card-info">
+            <h2 class="about__card-title">Настоящий городок</h2>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
+
+          <img class="about__card-image" src="images/about-image-1.jpg" alt="Вид на город Седона">
+        </div>
+
+        <div class="about__cards">
+          <article class="about__card">
+            <h3 class="about__card-title">Небольшая площадь</h3>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Все достопримечательности находятся очень близко</p>
+          </article>
+
+          <article class="about__card">
+            <h3 class="about__card-title">Красивая дорога</h3>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </article>
+
+          <article class="about__card">
+            <h3 class="about__card-title">Мало туристов</h3>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Большинство едет в Гранд Каньон и толпится там</p>
+          </article>
+        </div>
+
+        <div class="about__card about__card--full about__card--reverse">
+          <img class="about__card-image" src="images/about-image-2.jpg" alt="Мост дьявола">
+
+          <div class="about__card-info">
+            <h2 class="about__card-title">Там есть мост дьявола</h2>
+            <div class="about__card-divider"></div>
+            <p class="about__card-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features__info">
+        <h2 class="features__title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <p class="features__subtitle">Опытный персонал и качественное обслуживание!</p>
+      </div>
+
+      <div class="features__content">
+        <article class="features__card">
+          <img class="features__card-icon" src="images/features-housing.svg" alt="">
+          <h3 class="features__card-title">Жильё</h3>
+          <p class="features__card-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        </article>
+
+        <article class="features__card">
+          <img class="features__card-icon" src="images/features-food.svg" alt="">
+          <h3 class="features__card-title">Еда</h3>
+          <p class="features__card-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+        </article>
+
+        <article class="features__card">
+          <img class="features__card-icon" src="images/features-souvenirs.svg" alt="">
+          <h3 class="features__card-title">Сувениры</h3>
+          <p class="features__card-description">Не только китайского, но и настоящего местного производства!</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="cta__title">Заинтересовались?</h2>
+      <p class="cta__subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+        Седоне
+      </p>
+      <button class="cta__button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+    </section>
+
+    <dialog class="modal">
+      <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+      <button class="modal__close-button" type="button">
+        <img src="#" alt="Закрыть">
+      </button>
+
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
+        <div class="modal__form-item">
+          <label class="modal__label" for="check-in-date">Дата заезда:</label>
+          <input class="modal__input" type="date" id="check-in-date" name="check-in-date">
+        </div>
+
+        <div class="modal__form-item">
+          <label class="modal__label" for="check-out-date">Дата выезда:</label>
+          <input class="modal__input" type="date" id="check-out-date" name="check-out-date">
+        </div>
+
+        <div class="modal__form-steppers">
+          <div class="modal__form-item">
+            <label class="modal__label" for="adults">Взрослые:</label>
+            <input class="modal__input" type="number" id="adults" name="adults" min="0" value="2">
+          </div>
+          <div class="modal__form-item">
+            <label class="modal__label" for="children">Дети:</label>
+            <input class="modal__input" type="number" id="children" name="children" min="0" value="0">
+          </div>
+        </div>
+
+        <button class="modal__button" type="submit">Найти</button>
+      </form>
+    </dialog>
+
+    <section class="subscribe">
+      <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+      <p class="subscribe__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
+        <input class="subscribe__input" type="email" name="email" placeholder="Ваш e-mail" required>
+        <button class="subscribe__button" type="submit">Подписаться</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="https://vk.com/htmlacademy">
+            <img src="images/social-vk.svg" alt="ВКонтакте">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://t.me/htmlacademy">
+            <img src="images/social-telegram.svg" alt="Телеграм">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+            <img src="images/social-youtube.svg" alt="YouTube">
+          </a>
+        </li>
+      </ul>
+
+      <address>
+        <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </address>
+
+      <a class="footer__logo-link" href="https://htmlacademy.ru/" target="_blank">
+        <img class="footer__logo" src="images/logo-htmlacademy.svg" alt="Логотип HTML Academy">
+      </a>
+    </footer>
+  </body>
+
+</html>
