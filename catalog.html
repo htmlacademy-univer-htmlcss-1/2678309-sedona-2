@@ -12,7 +12,7 @@
         <div class="main-container">
             <header class="header">
                 <a class="header__logo-link" href="index.html">
-                    <img class="header__logo" src="images/logos/logo-sedona.svg" alt="Логотип Седоны">
+                    <img class="header__logo" src="images/logos/logo-sedona.svg" alt="Логотип Седоны" width="160px" height="80px">
                 </a>
 
                 <nav class="header__navigation navigation">
@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__separator"></span>
+                        <span class="breadcrumbs__separator">></span>
                     </li>
                     <li class="breadcrumbs__item">
                         <span class="breadcrumbs__current">Гостиницы</span>
@@ -79,26 +79,24 @@
                         </div>
 
                         <div class="search__content-item">
-                            <fieldset class="search__fieldset">
-                                <legend class="search__content-label">Тип жилья:</legend>
-                                <ul class="search__content-list">
-                                    <li class="search__content-item">
-                                        <input class="search__content-input" type="radio" id="housing-1" name="housing"
-                                            value="hotel">
-                                        <label class="search__content-label" for="housing-1">Гостиница</label>
-                                    </li>
-                                    <li class="search__content-item">
-                                        <input class="search__content-input" type="radio" id="housing-2" name="housing"
-                                            value="motel">
-                                        <label class="search__content-label" for="housing-2">Мотель</label>
-                                    </li>
-                                    <li class="search__content-item">
-                                        <input class="search__content-input" type="radio" id="housing-3" name="housing"
-                                            value="apartments">
-                                        <label class="search__content-label" for="housing-3">Апартаменты</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
+                            <legend class="search__content-label">Тип жилья:</legend>
+                            <ul class="search__content-list">
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-1" name="housing"
+                                        value="hotel">
+                                    <label class="search__content-label" for="housing-1">Гостиница</label>
+                                </li>
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-2" name="housing"
+                                        value="motel">
+                                    <label class="search__content-label" for="housing-2">Мотель</label>
+                                </li>
+                                <li class="search__content-item">
+                                    <input class="search__content-input" type="radio" id="housing-3" name="housing"
+                                        value="apartments">
+                                    <label class="search__content-label" for="housing-3">Апартаменты</label>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="search__content-item">
@@ -287,8 +285,8 @@
                             <li class="pagination__item">
                                 <a class="pagination__link" href="#">3</a>
                             </li>
-                            <li class="pagination__item pagination__item--dots">
-                                <a class="pagination__link" href="#">...</a>
+                            <li class="pagination__item">
+                                <a class="pagination__link pagination__link--dots" href="#">...</a>
                             </li>
                             <li class="pagination__item">
                                 <a class="pagination__link" href="#">10</a>
