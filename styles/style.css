@@ -141,6 +141,7 @@ input {
 .navigation__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     list-style: none;
     gap: 30px;
