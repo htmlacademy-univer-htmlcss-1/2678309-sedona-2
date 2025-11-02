@@ -140,6 +140,7 @@ ul {
     flex-direction: row;
     align-items: center;
     flex-grow: 1;
+    margin-left: 50px;
 }
 
 .navigation__list {
