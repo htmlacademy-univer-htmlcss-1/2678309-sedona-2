@@ -115,6 +115,10 @@ input {
     border-radius: 4px 0 0 4px;
 }
 
+ul {
+    padding: 0;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -289,6 +293,7 @@ input {
     display: flex;
     flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .features__info {
@@ -542,7 +547,8 @@ body:has(.catalog) .subscribe__subtitle {
 .search__content-item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 0;
+    gap: 0;
 }
 
 .search__content-label {
@@ -551,6 +557,7 @@ body:has(.catalog) .subscribe__subtitle {
     line-height: 24px;
     text-transform: capitalize;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .search__content-input {
@@ -563,6 +570,8 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: column;
     align-items: flex-start;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .search__content-list li {
@@ -581,7 +590,6 @@ body:has(.catalog) .subscribe__subtitle {
 .search__buttons {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .search__button {
@@ -652,7 +660,7 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 0;
 }
 
 .catalog__header-title {
