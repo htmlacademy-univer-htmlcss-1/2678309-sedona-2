@@ -107,6 +107,7 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 input {
@@ -124,6 +125,9 @@ input {
 }
 
 .header__logo-link {
+    position: relative;
+    height: 70px;
+    width: 140px;
     flex-grow: 0;
 }
 
@@ -137,6 +141,7 @@ input {
 .navigation__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     list-style: none;
     gap: 30px;
@@ -156,6 +161,7 @@ input {
     flex-direction: row;
     align-items: center;
     flex-grow: 0;
+    gap: 10px;
 }
 
 .header__button--main {
@@ -166,6 +172,8 @@ input {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
 .header__button-counter {
@@ -181,6 +189,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 70px;
 
     background-image: url("../images/hero/background.png");
     background-size: cover;
@@ -194,7 +203,7 @@ input {
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
-    padding: 69px 0;
+    padding: 69px 200px;
 }
 
 .about__card--full {
@@ -250,7 +259,13 @@ input {
 .about__card-divider {
     height: 2px;
     width: 60px;
-    background: rgba(71, 71, 71, 0.3);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.about__card-full-divider {
+    height: 2px;
+    width: 60px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .about__card--blue {
@@ -278,7 +293,7 @@ input {
 
 .features__info {
     background: #FFFFFF;
-    padding: 64px 0;
+    padding: 64px 300px;
 }
 
 .features__card {
@@ -374,8 +389,8 @@ input {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    border: none;
-    cursor: pointer;
+    margin-top: 30px;
+    padding: 8px 50px;
 }
 
 .subscribe {
@@ -387,6 +402,11 @@ input {
     background-size: cover;
     background-position: center;
     padding: 100px;
+}
+
+.subscribe,
+.cta {
+    padding: 100px 300px
 }
 
 .subscribe__title {
@@ -405,18 +425,21 @@ input {
     color: #FFFFFF;
 }
 
+.subscribe__form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
 .subscribe__input {
     background: #F2F2F2;
+    width: 452px;
     border: none;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
-}
-
-.subscribe__form {
-    display: flex;
-    flex-direction: row;
+    padding-left: 20px;
 }
 
 .subscribe__button {
@@ -428,7 +451,9 @@ input {
     text-transform: uppercase;
     color: #FFFFFF;
     border: none;
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
+    padding: 8px 50px;
 }
 
 .footer {
@@ -437,7 +462,7 @@ input {
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
-    padding: 0 70px;
+    padding: 20px 70px;
 }
 
 .footer__social {
@@ -446,12 +471,17 @@ input {
     align-items: center;
     list-style: none;
     flex-grow: 1;
+    gap: 26px;
 }
 
 .social__link {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.footer__logo-link {
+    flex-grow: 0;
 }
 
 .footer address {
@@ -466,10 +496,6 @@ input {
     text-transform: uppercase;
     color: #000000;
     text-decoration: none;
-}
-
-.footer__logo-link {
-    flex-grow: 0;
 }
 
 /* Стили для страницы каталога */
@@ -489,6 +515,10 @@ body:has(.catalog) .subscribe__subtitle {
     background-image: url("../images/blured-back.png");
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 35px 70px;
 }
 
 .search__title {
@@ -496,20 +526,23 @@ body:has(.catalog) .subscribe__subtitle {
     font-size: 60px;
     line-height: 78px;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .search__content {
+    width: 100%;
+}
+
+.search__content-form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
 }
 
 .search__content-item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .search__content-label {
@@ -572,10 +605,45 @@ body:has(.catalog) .subscribe__subtitle {
     border: none;
 }
 
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.breadcrumbs__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumbs__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumbs__icon {
+    color: #FFFFFF;
+}
+
+.breadcrumbs__separator {
+    color: #FFFFFF;
+}
+
+.breadcrumbs__current {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
 .catalog {
     background: #FFFFFF;
-    width: 1200px;
-    margin: 0 auto;
 }
 
 .catalog__header {
@@ -583,7 +651,7 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding: 20px 50px;
 }
 
 .catalog__header-title {
@@ -739,42 +807,6 @@ body:has(.catalog) .subscribe__subtitle {
     color: #333333;
 }
 
-.breadcrumbs {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.breadcrumbs__item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.breadcrumbs__link {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF;
-}
-
-.breadcrumbs__icon {
-    background: #FFFFFF;
-}
-
-.breadcrumbs__separator {
-    background: #FFFFFF;
-}
-
-.breadcrumbs__current {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-    color: #FFFFFF;
-}
-
 .pagination {
     display: flex;
     flex-direction: row;
@@ -786,6 +818,7 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: row;
     align-items: flex-start;
     list-style: none;
+    gap: 8px;
 }
 
 .pagination__item {
@@ -800,25 +833,25 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #F2F2F2;
+    background: #82B3D3;
+    color: #FFFFFF;
     border-radius: 4px;
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
     text-decoration: none;
+    padding: 10px 20px;
 }
 
 .pagination__link--active {
-    background: #82B3D3;
-    color: #FFFFFF;
+    background: #F2F2F2;
+    color: #000000;
 }
 
-.pagination__item--dots {
-    background: transparent;
-    border-radius: 4px;
+.pagination__link--dots {
+    background: none;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
