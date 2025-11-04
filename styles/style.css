@@ -131,7 +131,7 @@ ul {
 .header__logo-link {
     position: relative;
     height: 70px;
-    width: 140px;
+    width: 190px;
     flex-grow: 0;
 }
 
@@ -140,7 +140,6 @@ ul {
     flex-direction: row;
     align-items: center;
     flex-grow: 1;
-    margin-left: 50px;
 }
 
 .navigation__list {
