@@ -99,10 +99,12 @@ a:active {
 }
 
 button {
+    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
+    text-align: center;
     color: #000000;
     border: none;
     background: none;
@@ -187,14 +189,10 @@ fieldset {
 
 .header__button--main {
     background: #756157;
-    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
     padding: 8px 16px;
-    border-radius: 4px;
 }
 
 .header__button--main:hover,
@@ -434,11 +432,8 @@ fieldset {
 
 .cta__button {
     background: #756157;
-    font-weight: 700;
     font-size: 20px;
     line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
     margin-top: 30px;
     padding: 8px 50px;
@@ -518,15 +513,10 @@ fieldset {
 
 .subscribe__button {
     background: #82B3D3;
-    font-weight: 700;
     font-size: 20px;
     line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
-    border: none;
     border-radius: 0 4px 4px 0;
-    cursor: pointer;
     padding: 8px 50px;
 }
 
@@ -700,21 +690,15 @@ body:has(.catalog) .subscribe__subtitle {
 }
 
 .search__button {
-    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
-    border: none;
-    cursor: pointer;
     padding: 8px 35px;
     margin: 10px 0;
 }
 
 .search__button--apply {
     background: #82B3D3;
-    border-radius: 4px;
 }
 
 .search__button--apply:hover,
@@ -934,22 +918,14 @@ body:has(.catalog) .subscribe__subtitle {
 }
 
 .catalog__card-button--favorite {
-    font-family: "PT Sans", sans-serif;
     grid-area: favorite;
     background: #82B3D3;
-    border-radius: 4px;
-    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
-    border: none;
-    cursor: pointer;
     padding: 8px 20px;
     width: min-content;
     justify-self: end;
-
 }
 
 .catalog__card-button--favorite:hover,
