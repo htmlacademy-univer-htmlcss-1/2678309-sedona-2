@@ -163,6 +163,8 @@ fieldset {
     text-transform: capitalize;
     color: #000000;
     text-decoration: none;
+    padding-bottom: 100%;
+    padding-top: 100%;
 }
 
 .navigation__link--active {
@@ -172,7 +174,7 @@ fieldset {
 .navigation__link--active::after {
     content: "";
     position: absolute;
-    bottom: -23px;
+    bottom: 45px;
     left: 0;
     right: 0;
     height: 3px;

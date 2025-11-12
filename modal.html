@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dialog class="modal">
+        <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+        <button class="modal__close-button" type="button">
+          <img src="#" alt="Закрыть">
+        </button>
+
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
+          <div class="modal__form-item">
+            <label class="modal__label" for="check-in-date">Дата заезда:</label>
+            <input class="modal__input" type="date" id="check-in-date" name="check-in-date">
+          </div>
+
+          <div class="modal__form-item">
+            <label class="modal__label" for="check-out-date">Дата выезда:</label>
+            <input class="modal__input" type="date" id="check-out-date" name="check-out-date">
+          </div>
+
+          <div class="modal__form-steppers">
+            <div class="modal__form-item">
+              <label class="modal__label" for="adults">Взрослые:</label>
+              <input class="modal__input" type="number" id="adults" name="adults" min="0" value="2">
+            </div>
+            <div class="modal__form-item">
+              <label class="modal__label" for="children">Дети:</label>
+              <input class="modal__input" type="number" id="children" name="children" min="0" value="0">
+            </div>
+          </div>
+
+          <button class="modal__button" type="submit">Найти</button>
+        </form>
+      </dialog>
+</body>
+</html>

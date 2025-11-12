@@ -123,40 +123,10 @@
         <p class="cta__subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
           Седоне
         </p>
-        <button class="cta__button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <a href="modal.html">
+          <button class="cta__button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        </a>
       </section>
-
-      <dialog class="modal">
-        <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
-        <button class="modal__close-button" type="button">
-          <img src="#" alt="Закрыть">
-        </button>
-
-        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
-          <div class="modal__form-item">
-            <label class="modal__label" for="check-in-date">Дата заезда:</label>
-            <input class="modal__input" type="date" id="check-in-date" name="check-in-date">
-          </div>
-
-          <div class="modal__form-item">
-            <label class="modal__label" for="check-out-date">Дата выезда:</label>
-            <input class="modal__input" type="date" id="check-out-date" name="check-out-date">
-          </div>
-
-          <div class="modal__form-steppers">
-            <div class="modal__form-item">
-              <label class="modal__label" for="adults">Взрослые:</label>
-              <input class="modal__input" type="number" id="adults" name="adults" min="0" value="2">
-            </div>
-            <div class="modal__form-item">
-              <label class="modal__label" for="children">Дети:</label>
-              <input class="modal__input" type="number" id="children" name="children" min="0" value="0">
-            </div>
-          </div>
-
-          <button class="modal__button" type="submit">Найти</button>
-        </form>
-      </dialog>
 
       <section class="subscribe">
         <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
