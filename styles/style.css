@@ -99,10 +99,12 @@ a:active {
 }
 
 button {
+    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
+    text-align: center;
     color: #000000;
     border: none;
     background: none;
@@ -112,11 +114,14 @@ button {
 
 input {
     background: #F2F2F2;
-    border-radius: 4px 0 0 4px;
 }
 
 ul {
     padding: 0;
+}
+
+fieldset {
+    border: none;
 }
 
 .header {
@@ -158,6 +163,22 @@ ul {
     text-transform: capitalize;
     color: #000000;
     text-decoration: none;
+    padding-bottom: 100%;
+    padding-top: 100%;
+}
+
+.navigation__link--active {
+    position: relative;
+}
+
+.navigation__link--active::after {
+    content: "";
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #756257;
 }
 
 .header__controls {
@@ -165,28 +186,53 @@ ul {
     flex-direction: row;
     align-items: center;
     flex-grow: 0;
-    gap: 10px;
+    gap: 20px;
 }
 
 .header__button--main {
     background: #756157;
-    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
     padding: 8px 16px;
-    border-radius: 4px;
+}
+
+.header__button--main:hover,
+.header__button--main:focus {
+    background: #615048;
+}
+
+.header__button--main:active {
+    color: #FFFFFF30;
+}
+
+.header__button--search {
+    height: 20px;
+    width: 20px;
+}
+
+.header__button--favorites {
+    position: relative;
+    height: 18px;
+    width: 17px;
+    margin-right: 10px;
 }
 
 .header__button-counter {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: calc(50% - 5px/2 + 7.5px);
+    top: calc(50% - 19px/2 - 11px);
     background: #7DB54F;
+    border-radius: 50%;
     font-weight: 400;
     font-size: 10px;
     line-height: 10px;
     text-align: center;
     color: #FFFFFF;
+    padding-top: 5px;
+    padding-right: 2px;
 }
 
 .hero {
@@ -388,14 +434,20 @@ ul {
 
 .cta__button {
     background: #756157;
-    font-weight: 700;
     font-size: 20px;
     line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
     margin-top: 30px;
     padding: 8px 50px;
+}
+
+.cta__button:hover,
+.cta__button:focus {
+    background: #615048;
+}
+
+.cta__button:active {
+    color: #FFFFFF30;
 }
 
 .subscribe {
@@ -439,26 +491,44 @@ ul {
 .subscribe__input {
     background: #F2F2F2;
     width: 452px;
-    border: none;
+    border: white;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
     padding-left: 20px;
+    border-radius: 4px 0 0 4px;
+}
+
+.subscribe__input:hover {
+    opacity: 0.9;
+}
+.subscribe__input:active {
+    outline: none;
+}
+
+.subscribe__input:focus {
+    opacity: 1.0;
+    outline: none;
+    border: 3px solid #68A2CA;
 }
 
 .subscribe__button {
     background: #82B3D3;
-    font-weight: 700;
     font-size: 20px;
     line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
-    border: none;
     border-radius: 0 4px 4px 0;
-    cursor: pointer;
     padding: 8px 50px;
+}
+
+.subscribe__button:hover,
+.subscribe__button:focus {
+    background: #68A2CA;
+}
+
+.subscribe__button:active {
+    color: #FFFFFF30;
 }
 
 .footer {
@@ -483,10 +553,30 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    fill: #82B3D3;
+}
+
+.social__link:hover,
+.social__link:focus {
+    fill: #68A2CA;
+}
+
+.social__link:active {
+    fill: #68A2CA30;
 }
 
 .footer__logo-link {
     flex-grow: 0;
+    fill: #000000;
+}
+
+.footer__logo-link:hover,
+.footer__logo-link:focus {
+    fill: #756157;
+}
+
+.footer__logo-link:active {
+    fill: #75615730;
 }
 
 .footer address {
@@ -501,6 +591,15 @@ ul {
     text-transform: uppercase;
     color: #000000;
     text-decoration: none;
+}
+
+.footer__phone:hover,
+.footer__phone:focus {
+    color: #756157;
+}
+
+.footer__phone:active {
+    color: #75615730;
 }
 
 /* Стили для страницы каталога */
@@ -524,6 +623,7 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: column;
     align-items: start;
     padding: 35px 70px;
+    gap: 10px;
 }
 
 .search__title {
@@ -570,7 +670,6 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: column;
     align-items: flex-start;
     list-style: none;
-    margin: 0;
     padding: 0;
 }
 
@@ -593,20 +692,26 @@ body:has(.catalog) .subscribe__subtitle {
 }
 
 .search__button {
-    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
-    border: none;
-    cursor: pointer;
+    padding: 8px 35px;
+    margin: 10px 0;
 }
 
 .search__button--apply {
     background: #82B3D3;
-    border-radius: 4px;
 }
+
+.search__button--apply:hover,
+.search__button--apply:focus {
+    background: #68A2CA;
+}
+
+.search__button--apply:active {
+    color: #FFFFFF30;
+}
+
 
 .search__button--reset {
     background: transparent;
@@ -648,6 +753,14 @@ body:has(.catalog) .subscribe__subtitle {
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+}
+
+.breadcrumbs__current:hover {
+    color: #FFFFFF60;
+}
+
+.breadcrumbs__current:active {
+    color: #FFFFFF30
 }
 
 .catalog {
@@ -789,36 +902,54 @@ body:has(.catalog) .subscribe__subtitle {
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 8px 20px;
+    padding: 8px 26px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: min-content;
 }
 
-.catalog__card-link--details:hover {
+.catalog__card-link--details:hover,
+.catalog__card-link--details:focus {
     color: #FFFFFF;
+    background: #615048;
+}
+
+.catalog__card-link--details:active {
+    color: #FFFFFF30;
 }
 
 .catalog__card-button--favorite {
     grid-area: favorite;
     background: #82B3D3;
-    border-radius: 4px;
-    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-    padding: 8px 10px;
+    padding: 8px 20px;
     width: min-content;
     justify-self: end;
 }
 
+.catalog__card-button--favorite:hover,
+.catalog__card-button--favorite:focus {
+    background: #68A2CA;
+}
+
+.catalog__card-button--favorite:active {
+    color: #FFFFFF30;
+}
+
 .catalog__card-button--favorite--active {
     background: #7DB54F;
+}
+
+.catalog__card-button--favorite--active:hover,
+.catalog__card-button--favorite--active:focus {
+    background: #6C9E42;
+}
+
+.catalog__card-button--favorite--active:active {
+    color: #FFFFFF30;
 }
 
 .catalog__card-footer {
@@ -854,10 +985,10 @@ body:has(.catalog) .subscribe__subtitle {
 }
 
 .catalog__divider {
-    height: 2px;
+    height: 1px;
     width: 100%;
     background: #E6E6E6;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .catalog__pagination,
@@ -896,12 +1027,18 @@ body:has(.catalog) .subscribe__subtitle {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 10px 20px;
+    height: 60px;
+    width: 60px;
 }
 
-.pagination__link:hover {
+.pagination__link:hover,
+.pagination__link:focus {
     color: #FFFFFF;
-    opacity: 0.8;
+    background: #68A2CA;
+}
+
+.pagination__link:active {
+    color: #FFFFFF30;
 }
 
 .pagination__link--active {
@@ -909,16 +1046,26 @@ body:has(.catalog) .subscribe__subtitle {
     color: #000000;
 }
 
-.pagination__link--active:hover {
+.pagination__link--active:hover,
+.pagination__link--active:focus,
+.pagination__link--active:active {
+    background: #F2F2F2;
     color: #000000;
-    opacity: 0.8;
 }
 
 .pagination__link--dots {
+    padding: 10px 20px;
     background: none;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
     text-align: center;
+    color: #000000;
+}
+
+.pagination__link-dots:hover,
+.pagination__link--dots:focus,
+.pagination__link--dots:acitve {
+    background: none;
     color: #000000;
 }
