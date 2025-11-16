@@ -829,10 +829,10 @@ body:has(.catalog) .subscribe__subtitle {
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 12px 20px;
+    padding: 12px 50px 12px 20px;
     border: none;
     clip: auto;
-    overflow: visible;
+    overflow: hidden;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
@@ -983,13 +983,43 @@ body:has(.catalog) .subscribe__subtitle {
     color: #000000;
 }
 
+.catalog__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 70px;
+}
+
 .catalog__select {
+    padding: 14px 20px;
+    width: 292px;
+    height: 50px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    background-color: #ffffff;
+    appearance: none;
+    background-image: url("../images/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 11.93px 7.02px;
+    cursor: pointer;
+}
+
+.catalog__select:hover {
+    border-color: #68A2CA;
+}
+
+.catalog__select:focus {
+    outline: 2px solid #83B3D3;
+}
+
+.catalog__select:active {
+    border-color: #3F5E72;
 }
 
 .catalog__view-buttons {
@@ -997,17 +1027,51 @@ body:has(.catalog) .subscribe__subtitle {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    padding: 0;
+    gap: 8px;
+    width: 160px;
+    height: 48px;
 }
 
 .catalog__view-button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 12px;
+    gap: 10px;
+    width: 48px;
+    height: 48px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     background: transparent;
     cursor: pointer;
 }
 
+.catalog__view-button--active,
 .catalog__view-button:first-child {
     border: 2px solid #000000;
+}
+
+.catalog__view-button img {
+    width: 16px;
+    height: 14px;
+    display: block;
+}
+
+.catalog__view-button:hover {
+    border-color: #000000;
+}
+
+.catalog__view-button:focus {
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+}
+
+.catalog__view-button:active {
+    border-color: #000000;
+    opacity: 0.3;
 }
 
 .catalog__content {
