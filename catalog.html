@@ -140,20 +140,24 @@
                 <div class="catalog__header">
                     <h2 class="catalog__header-title">Найдено гостиниц: 38</h2>
 
-                    <select class="catalog__select" name="sorting">
-                        <option value="cheap">Сначала дешевые</option>
-                    </select>
+                    <div class="catalog__controls">
+                        <div class="catalog__select-wrapper">
+                            <select class="catalog__select" name="sorting">
+                                <option value="cheap">Сначала дешевые</option>
+                            </select>
+                        </div>
 
-                    <div class="catalog__view-buttons">
-                        <button class="catalog__view-button catalog__view-button" type="button">
-                            <img src="images/icons/grid-icon.svg" alt="Сетка">
-                        </button>
-                        <button class="catalog__view-button catalog__view-button" type="button">
-                            <img src="images/icons/list-icon.svg" alt="Плитка">
-                        </button>
-                        <button class="catalog__view-button catalog__view-button" type="button">
-                            <img src="images/icons/list-icon.svg" alt="Список">
-                        </button>
+                        <div class="catalog__view-buttons">
+                            <button class="catalog__view-button catalog__view-button--active" type="button">
+                                <img src="images/icons/grid-icon.svg" alt="Сетка">
+                            </button>
+                            <button class="catalog__view-button" type="button">
+                                <img src="images/icons/tile-icon.svg" alt="Плитка">
+                            </button>
+                            <button class="catalog__view-button" type="button">
+                                <img src="images/icons/list-icon.svg" alt="Список">
+                            </button>
+                        </div>
                     </div>
                 </div>
 
